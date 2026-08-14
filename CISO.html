@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bluemetrix Secure AI Data Enablement">
+<title>Bluemetrix | Secure AI Data Enablement</title>
+<style>
+:root{
+  --navy:#0e2340;
+  --navy2:#14335d;
+  --blue:#1187f4;
+  --blue2:#0b67d1;
+  --orange:#ff7a00;
+  --ink:#14263d;
+  --muted:#607087;
+  --line:#dfe7f1;
+  --pale:#eef6ff;
+  --bg:#f7f9fc;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--bg);
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.6;
+}
+a{color:inherit}
+.container{max-width:1120px;margin:0 auto;padding:0 28px}
+.nav{
+  position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)
+}
+.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:28px;font-weight:800;letter-spacing:-.055em;text-decoration:none;white-space:nowrap}
+.logo .blue{color:var(--blue)}
+.logo .navy{color:var(--navy)}
+.logo .dot{display:inline-block;width:7px;height:7px;background:var(--orange);margin-left:2px;vertical-align:15px}
+.pill{font-size:12px;font-weight:800;letter-spacing:.02em;color:var(--blue2);background:var(--pale);border:1px solid #cfe3ff;border-radius:999px;padding:7px 11px}
+.hero{
+  padding:76px 0 56px;
+  background:linear-gradient(135deg,#fff 0%,#f4f9ff 55%,#eaf4ff 100%);
+  border-bottom:1px solid var(--line)
+}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:800;color:var(--blue2)}
+h1{font-size:clamp(42px,6.8vw,74px);line-height:1.02;letter-spacing:-.055em;margin:14px 0 22px;max-width:980px}
+.lede{font-size:20px;max-width:900px;color:#3d526b;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:800;border-radius:10px;padding:13px 18px;
+  transition:.18s ease;border:1px solid transparent
+}
+.btn.primary{background:var(--blue2);color:white}
+.btn.primary:hover{background:#084f9f;transform:translateY(-1px)}
+.btn.secondary{background:white;border-color:var(--line)}
+.btn.secondary:hover{border-color:#bad0e9;transform:translateY(-1px)}
+.quote{
+  margin-top:36px;padding:22px 24px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);
+  border-radius:12px;box-shadow:0 8px 30px rgba(14,35,64,.05);font-size:22px;font-weight:800;max-width:950px
+}
+section{padding:62px 0;border-bottom:1px solid var(--line);background:white}
+section.alt{background:var(--bg)}
+h2{font-size:36px;line-height:1.15;letter-spacing:-.035em;margin:0 0 18px}
+h3{font-size:20px;line-height:1.25;letter-spacing:-.02em;margin:0 0 8px}
+p{margin:0 0 16px}
+.bigq{font-size:25px;font-weight:800;line-height:1.35;margin-top:26px;max-width:900px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 6px 20px rgba(14,35,64,.04)}
+.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue2);color:#fff;font-weight:900;margin-bottom:14px}
+.step .arrow{position:absolute;right:-15px;top:45%;color:var(--blue2);font-size:24px;font-weight:900}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 6px 20px rgba(14,35,64,.04)}
+.card .icon{font-size:25px;margin-bottom:10px}
+.signal{margin-top:24px;background:var(--pale);border:1px solid #cfe3ff;border-radius:14px;padding:22px 24px;font-weight:700}
+.cols2{display:grid;grid-template-columns:1.04fr .96fr;gap:32px;align-items:start}
+ul.clean{padding-left:20px;margin:10px 0 0}
+ul.clean li{margin:7px 0}
+.video-wrap{background:#0c1624;border-radius:14px;overflow:hidden;box-shadow:0 16px 42px rgba(14,35,64,.18)}
+.video{width:100%;aspect-ratio:16/9;border:0;display:block}
+.mini-card{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:16px}
+.mini-card:hover{border-color:#a9c7ef;box-shadow:0 8px 24px rgba(14,35,64,.07)}
+.arch{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin-top:26px}
+.node{flex:1 1 155px;min-height:94px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;border:1px solid var(--line);border-radius:12px;padding:15px;background:#fff}
+.node.hl{background:var(--pale);border-color:#bed8ff;color:#114b92}
+.sep{display:flex;align-items:center;color:var(--blue2);font-size:24px;font-weight:900}
+.industry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.industry{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px 18px}
+.industry b{display:block;margin-bottom:3px}
+.triggers{margin-top:22px;padding-left:20px}
+.triggers li{margin:8px 0}
+.cta{background:linear-gradient(135deg,var(--navy),#0c58c3);color:#fff;border-bottom:0}
+.cta h2{font-size:42px;max-width:850px}
+.cta p{font-size:19px;max-width:850px;color:#dbe8fb}
+.cta .btn.primary{background:#fff;color:#0b4eaa}
+.footer{background:#0b1b2e;color:#c4cfdd;padding:28px 0;font-size:14px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer a{color:white}
+.note{font-size:13px;color:var(--muted)}
+@media(max-width:840px){
+  .container{padding:0 20px}
+  .hero{padding:54px 0 42px}
+  .pill{display:none}
+  .steps,.grid3,.cols2,.industry-grid{grid-template-columns:1fr}
+  .step .arrow{display:none}
+  section{padding:46px 0}
+  h2{font-size:30px}
+  .cta h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="https://www.bluemetrix.com/" target="_blank" rel="noopener">
+      <span class="blue">blue</span><span class="navy">metrix</span><span class="dot"></span>
+    </a>
+    <div class="pill">For CISOs, Data Security & AI Governance Leaders</div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="container">
+      <div class="eyebrow">Secure AI Data Enablement</div>
+      <h1>Use enterprise data with AI — without exposing what matters most.</h1>
+      <p class="lede">The pressure to adopt AI is growing quickly. So is the amount of real enterprise data being introduced into prompts, copilots, agents and AI-enabled workflows. Bluemetrix helps organisations detect and protect both recognised sensitive data and information that is sensitive because of what it means to the business.</p>
+      <div class="actions">
+        <a class="btn primary" href="#demo">See it in practice</a>
+        <a class="btn secondary" href="https://www.bluemetrix.com/contact" target="_blank" rel="noopener">Discuss your AI data risk</a>
+      </div>
+      <div class="quote">Most protection tools know what the world considers sensitive. Bluemetrix can learn what your organisation considers sensitive.</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>The AI data security gap</h2>
+      <p>Traditional discovery controls are highly effective at finding recognised sensitive-data types such as <strong>PII, PHI, payment data and known patterns</strong>.</p><p>But they may have no reason to recognise that an internal product code, ingredient combination, project name, process description, technical phrase or formulation is commercially sensitive.</p>
+      <div class="bigq">Can we identify what is sensitive to our organisation before that information is exposed to AI?</div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="eyebrow">The Bluemetrix difference</div>
+      <h2>Learn → Detect → Tokenise → Use</h2>
+      <div class="steps"><div class="step"><div class="num">1</div><h3>Learn what is sensitive to your organisation</h3><p>Train the discovery capability around your own language, terminology, naming conventions, proprietary information and business context.</p><span class="arrow">→</span></div><div class="step"><div class="num">2</div><h3>Detect standard and company-specific risk</h3><p>Identify conventional sensitive information alongside information that is unique to the organisation.</p><span class="arrow">→</span></div><div class="step"><div class="num">3</div><h3>Tokenise before AI exposure</h3><p>Apply deterministic tokenisation to identified sensitive information before protected content is passed to downstream AI services.</p><span class="arrow">→</span></div><div class="step"><div class="num">4</div><h3>Preserve data utility</h3><p>Allow AI applications to work with protected information while reducing unnecessary exposure of the underlying sensitive data.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>What this gives the CISO</h2>
+      <div class="grid3"><div class="card"><div class="icon">◉</div><h3>Broader sensitive-data coverage</h3><p>Extend protection beyond PII and PHI to company-specific IP, terminology and commercially sensitive information.</p></div><div class="card"><div class="icon">⛨</div><h3>Control before exposure</h3><p>Detect and protect sensitive information before it reaches downstream AI services, rather than relying only on controls after the fact.</p></div><div class="card"><div class="icon">↗</div><h3>Safer AI adoption</h3><p>Enable business teams to work with more realistic enterprise data without forcing security to choose between uncontrolled exposure and blocking the use case.</p></div></div>
+      <div class="signal">🎯 A useful signal: the business has a viable AI use case, but security is uncomfortable with the proprietary or sensitive information contained in the data required to make it work.</div>
+    </div>
+  </section>
+
+  <section id="demo" class="alt">
+    <div class="container">
+      <div class="cols2">
+        <div>
+          <div class="eyebrow">See it in practice</div>
+          <h2>Food & Beverage</h2>
+          <p>A food manufacturer does not only need to protect personal or regulated data. Its most commercially sensitive information may be recipes, formulations, ingredients, exact quantities, internal codes and specialist terminology.</p><p><strong>Bluemetrix can learn the organisation’s terminology and context, detect those sensitive elements and tokenise them before protected content is used by AI.</strong></p>
+          <ul class="clean">
+            <li>Recipes and formulations</li>
+            <li>Ingredient names and combinations</li>
+            <li>Exact quantities</li>
+            <li>Internal product codes</li>
+            <li>Specialist terminology</li>
+            <li>Supplier information</li>
+            <li>Proprietary manufacturing knowledge</li>
+          </ul>
+        </div>
+        <div>
+          <div class="video-wrap">
+            <iframe class="video" src="https://player.vimeo.com/video/1214234591" title="Bluemetrix Food Ingredients demo" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a class="mini-card" href="https://vimeo.com/1214234591?share=copy&fl=sv&fe=ci" target="_blank" rel="noopener">
+            <strong>Watch the Food Ingredients demo →</strong><br>
+            <span class="note">Open the demonstration in Vimeo</span>
+          </a>
+          <a class="mini-card" href="https://silver-adele-95.tiiny.site/" target="_blank" rel="noopener">
+            <strong>Explore the interactive protection flow →</strong><br>
+            <span class="note">See company-aware discovery, tokenisation and protected AI use</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Where it fits in the AI security architecture</h2>
+      <p><strong>Bluemetrix acts as a protection layer between enterprise data and downstream AI consumption.</strong> The objective is to reduce unnecessary exposure while preserving enough data utility for the AI use case to proceed.</p>
+      <div class="arch">
+        <div class="node">Enterprise data</div><div class="sep">→</div>
+        <div class="node hl">Bluemetrix<br>company-aware discovery</div><div class="sep">→</div>
+        <div class="node hl">Deterministic<br>tokenisation</div><div class="sep">→</div>
+        <div class="node">Protected data</div><div class="sep">→</div>
+        <div class="node">AI / GenAI / LLM</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2>The definition of sensitive is different in every organisation</h2>
+      <div class="industry-grid">
+        <div class="industry"><b>Food & Beverage</b>Recipes, formulations, ingredient combinations, supplier intelligence</div>
+        <div class="industry"><b>Pharma & Life Sciences</b>Compounds, formulations, processes, product information, specialist terminology</div>
+        <div class="industry"><b>Advanced Manufacturing</b>Designs, specifications, BOM information, proprietary processes</div>
+        <div class="industry"><b>Financial Services</b>Customer and transaction information, internal strategy, proprietary models</div>
+        <div class="industry"><b>Professional Services</b>Client-confidential information, methodologies, engagement data and IP</div>
+      </div>
+    </div>
+  </section>
+
+  
+        <section>
+          <div class="container">
+            <h2>When to consider this capability</h2>
+            <ul class="triggers"><li>Employees or applications are sending enterprise data to AI systems.</li><li>Standard PII/PHI detection does not cover the organisation’s full definition of sensitive information.</li><li>The business wants to move AI from pilot to production using real operational data.</li><li>Security needs a practical control that does not simply block the AI use case.</li><li>Proprietary terminology, technical language or internal codes carry sensitivity that generic controls may not understand.</li><li>The organisation needs to preserve data utility while reducing exposure.</li></ul>
+          </div>
+        </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Can your current controls recognise what is sensitive to your business?</h2>
+      <p>If your AI programme is moving from generic pilots into real operational use cases, the question is no longer simply whether the data contains PII. It is whether your controls understand the information your organisation cannot afford to expose.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.bluemetrix.com/contact" target="_blank" rel="noopener">Discuss your AI data risk →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><strong>Bluemetrix</strong> — 20+ years of enterprise data expertise across data engineering, governance and security.</div>
+    <div><a href="https://www.bluemetrix.com/" target="_blank" rel="noopener">bluemetrix.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
